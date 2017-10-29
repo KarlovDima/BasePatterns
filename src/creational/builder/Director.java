@@ -8,10 +8,7 @@ public class Director {
     }
 
     public Website buildWebsite(){
-        builder.createWebsite();
-        builder.buildName();
-        builder.buildCms();
-        builder.buildPrice();
+        builder.createWebsite().buildName().buildCms().buildPrice();
 
         return builder.getWebsite();
     }

@@ -2,17 +2,20 @@ package creational.builder;
 
 public class VisitCardWebsiteBuilder extends WebsiteBuilder {
     @Override
-    void buildName() {
+    VisitCardWebsiteBuilder buildName() {
         website.setName("VisitCardWebsite");
+        return this;
     }
 
     @Override
-    void buildCms() {
+    VisitCardWebsiteBuilder buildCms() {
         website.setCms(CMS.WORDPRESS);
+        return this;
     }
 
     @Override
-    void buildPrice() {
+    VisitCardWebsiteBuilder buildPrice() {
         website.setPrice(500);
+        return this;
     }
 }

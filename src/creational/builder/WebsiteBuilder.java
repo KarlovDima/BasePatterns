@@ -3,18 +3,19 @@ package creational.builder;
 public abstract class WebsiteBuilder {
     protected Website website;
 
-    public void createWebsite() {
+    public WebsiteBuilder createWebsite() {
         website = new Website();
+        return this;
     }
 
     public Website getWebsite() {
         return website;
     }
 
-    abstract void buildName();
+    abstract WebsiteBuilder buildName();
 
-    abstract void buildCms();
+    abstract WebsiteBuilder buildCms();
 
-    abstract void buildPrice();
+    abstract WebsiteBuilder buildPrice();
 }
 
